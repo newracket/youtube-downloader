@@ -46,7 +46,7 @@ for i, video in enumerate(videos):
         # Gets data about the video
         title = youtube.title
         description = youtube.description
-        date = youtube.publish_date.strftime("%m/%d/%Y, %H:%M:%S")
+        date = youtube.publish_date.strftime("%m/%d/%Y")
 
         output[title] = {'link': link, 'description': description, 'date': date}
 
