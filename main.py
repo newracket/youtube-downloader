@@ -57,5 +57,5 @@ for i, video in enumerate(videos):
     except:
         print(video.text)
 
-with open('output.json', 'w') as outputFile:
+with open('video_data.json', 'w') as outputFile:
     outputFile.write(json.dumps(output))
