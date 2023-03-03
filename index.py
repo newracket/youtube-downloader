@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Change these variables only
-URL = "https://www.youtube.com/@YouTube/videos"  # Url of channel on the videos tab
+CHANNEL_URL = "https://www.youtube.com/@YouTube/videos"  # Url of channel on the videos tab
 LIMIT = 5  # Number of videos to download from the channel
 
 # Max limit is around 30, however many videos it loads at the start
@@ -24,7 +24,7 @@ options.add_argument('--ignore-ssl-errors')
 # Opens URL
 driver = webdriver.Chrome(options=options,
                           service=Service(ChromeDriverManager().install()))
-driver.get(URL)
+driver.get(CHANNEL_URL)
 driver.execute_script("window.scrollTo(0, 10000);")
 
 # Finds video elements
